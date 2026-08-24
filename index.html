@@ -1,0 +1,54 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- charset is injected first by the <SEO> component's <Head> block (src/components/layout/SEO.tsx) so it lands within the first ~1024 bytes of every SSG-rendered page, ahead of the large per-page JSON-LD schema. -->
+    <link rel="icon" type="image/png" href="/logo.png" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="theme-color" content="#6B4226" />
+    <!--
+      No static <title>/<meta description>/<meta robots> here on purpose: every route sets
+      its own via the <SEO> component (src/components/layout/SEO.tsx), which vite-react-ssg
+      renders into the pre-built HTML for each page. Adding static duplicates here previously
+      caused every page in the production build to carry TWO <title> and TWO <meta description>
+      tags (one correct + one generic fallback) — invalid HTML that made some crawlers/social
+      link-preview bots pick the wrong, generic one for every page except the homepage.
+    -->
+
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "Organization",
+        "name": "WINVN INT CO., LTD",
+        "alternateName": "Coffee Wood Chew by WINVN",
+        "url": "https://www.winvnint.com",
+        "logo": "https://www.winvnint.com/logo.png",
+        "description": "WINVN turns discarded coffee wood from Vietnam's Central Highlands into natural, sustainable dog chews, exported to over 40 countries.",
+        "founder": { "@type": "Person", "name": "Ton That Nhat Cam" },
+        "address": {
+          "@type": "PostalAddress",
+          "streetAddress": "70 Street 10, Van Phuc Urban Area",
+          "addressLocality": "Ho Chi Minh City",
+          "addressCountry": "VN"
+        },
+        "contactPoint": {
+          "@type": "ContactPoint",
+          "email": "Sale@winvnint.com",
+          "contactType": "sales",
+          "areaServed": "Worldwide"
+        },
+        "sameAs": [
+          "https://www.facebook.com/profile.php?id=61581148330861",
+          "https://www.youtube.com/@CoffeeWoodChew",
+          "https://www.linkedin.com/in/coffee-wood-chew-winvn-int-co-ltd-1b9323394/"
+        ]
+      }
+    </script>
+  </head>
+  <body>
+    <div id="root"></div>
+    <noscript>
+      WINVN Coffee Wood Chew — natural coffee wood dog chews manufactured in Vietnam, exported to 40+ countries. Enable JavaScript to view the full site, or email Sale@winvnint.com for inquiries.
+    </noscript>
+    <script type="module" src="/src/main.tsx"></script>
+  </body>
+</html>
