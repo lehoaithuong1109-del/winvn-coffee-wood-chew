@@ -1,0 +1,69 @@
+@import "tailwindcss";
+
+@theme {
+  --color-coffee: #6B4226;
+  --color-beige: #F8F1E7;
+  --color-wood: #B98652;
+  --color-dark: #2B1B12;
+  --color-accent-orange: #A55518;
+  /* Lighter orange for text on dark backgrounds (bg-dark sections/cards) — the darker
+     --color-accent-orange above is tuned for AA contrast on light backgrounds and is
+     too close to bg-dark's own tone to read clearly there. */
+  --color-orange-light: #E8935A;
+  --color-navy: #1B2A4A;
+
+  --font-header: "Neuton", serif;
+  --font-body: "Work Sans", sans-serif;
+
+  --radius-4xl: 2rem;
+  --radius-5xl: 2.5rem;
+}
+
+@layer base {
+  * {
+    @apply border-dark/10;
+  }
+  
+  body {
+    @apply bg-beige text-dark font-body antialiased;
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    @apply font-header;
+  }
+}
+
+@layer components {
+  .section-container {
+    @apply max-w-[1440px] mx-auto px-6 md:px-12 lg:px-16 py-12 md:py-20;
+  }
+
+  .glass-nav {
+    @apply bg-beige/80 backdrop-blur-md border-b border-dark/5;
+  }
+
+  .hover-lift {
+    @apply transition-all duration-300 ease-out;
+    transform: translateY(0);
+  }
+
+  .hover-lift:hover {
+    transform: translateY(-3px);
+    text-shadow: 0 4px 10px rgba(107, 66, 38, 0.35);
+  }
+
+  .hover-lift-btn {
+    @apply transition-all duration-300 ease-out;
+    transform: translateY(0) scale(1);
+    box-shadow: 0 4px 14px rgba(107, 66, 38, 0.2);
+  }
+
+  .hover-lift-btn:hover {
+    transform: translateY(-3px) scale(1.03);
+    box-shadow: 0 12px 24px rgba(224, 123, 46, 0.35);
+  }
+
+  .hover-lift-btn:active {
+    transform: translateY(-1px) scale(1.01);
+  }
+}
