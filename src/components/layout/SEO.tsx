@@ -1,6 +1,6 @@
 import { Head } from 'vite-react-ssg';
 
-const SITE_ORIGIN = 'https://www.winvnint.com';
+const SITE_ORIGIN = 'https://winvn-coffee-wood-chew.vercel.app';
 const DEFAULT_IMAGE = '/images/hero-main.jpg';
 
 interface SEOProps {
