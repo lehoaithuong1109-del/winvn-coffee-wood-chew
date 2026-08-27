@@ -26,4 +26,4 @@ Allow: /
 User-agent: Applebot-Extended
 Allow: /
 
-Sitemap: https://www.winvnint.com/sitemap.xml
+Sitemap: https://winvn-coffee-wood-chew.vercel.app/sitemap.xml
