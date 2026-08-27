@@ -1,4 +1,4 @@
-const SITE_ORIGIN = 'https://www.winvnint.com';
+const SITE_ORIGIN = 'https://winvn-coffee-wood-chew.vercel.app';
 
 export const organizationSchema = {
   '@context': 'https://schema.org',
